@@ -1,0 +1,15 @@
+1. HOW TO ADD NEW PICTURE
+ -Prepare a image .jpg zise 128*96
+ -using python script in tool folder to convert image to C file
+    python3 imagetoyuv.py imagename.jpg
+    ex.python imagetoyuv.py picture0.jpg 
+     =>   C file saved to picture0.c
+ - move imagename.c to Core/Src
+ - Declare iamge in main.c 
+ 	ex: extern const unsigned char  picture0_yuyv[];
+ - add variable to Picture array
+	ex: eonst unsigned char* pictures[] = {
+	    		picture0_yuyv,
+	    		
+2. HOW TO CHANGE TIME INTERVAL 
+  - change define TIME_INTERVAL  unit(ms)
